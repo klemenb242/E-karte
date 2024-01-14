@@ -12,23 +12,23 @@ namespace web.Controllers_Api
 {
     [Route("api/v1/Venue")]
     [ApiController]
-    public class VenuessApiController : ControllerBase
+    public class VenuesApiController : ControllerBase
     {
         private readonly EkarteContext _context;
 
-        public VenuessApiController(EkarteContext context)
+        public VenuesApiController(EkarteContext context)
         {
             _context = context;
         }
 
-        // GET: api/VenuessApi
+        // GET: api/VenuesApi
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Venue>>> GetVenues()
         {
             return await _context.Venues.ToListAsync();
         }
 
-        // GET: api/VenuessApi/5
+        // GET: api/VenuesApi/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Venue>> GetVenue(int id)
         {
@@ -42,7 +42,7 @@ namespace web.Controllers_Api
             return venue;
         }
 
-        // PUT: api/VenuessApi/5
+        // PUT: api/VenuesApi/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutVenue(int id, Venue venue)
@@ -73,7 +73,7 @@ namespace web.Controllers_Api
             return NoContent();
         }
 
-        // POST: api/VenuessApi
+        // POST: api/VenuesApi
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Venue>> PostVenue(Venue venue)
@@ -84,7 +84,7 @@ namespace web.Controllers_Api
             return CreatedAtAction("GetVenue", new { id = venue.VenueID }, venue);
         }
 
-        // DELETE: api/VenuessApi/5
+        // DELETE: api/VenuesApi/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteVenue(int id)
         {
