@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "bin\\Release\\net6.0\\publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/e9a3de86-3d28-4151-aa96-ebaf16277ef9/resourceGroups/is_ekarte/providers/Microsoft.Web/sites/E-karte"
+}
